@@ -18,12 +18,26 @@ mybytes2:   .byte   0b01000010  @ des octets en binaire
 mystr:      .asciz  "Hello"     @ Une chaîne terminée par des zéros
 */
 
+.section vectors, "ax", %progbits
+
+.long 0x2001FFFC
+.long _start
+.long _default_handler
+.long _default_handler
+.long _default_handler
+.long _default_handler
+.long _default_handler
+
+.thumb_func
+_default_handler:
+  b .
 
 /* Contenu de la section boot */
 .section	boot, "awx", %progbits
 .align 4    @ Alignement de la section
 
 .global     _start  @ _start est un symbole global pour l'éditeur de liens
+.thumb_func
 _start:     @ Une étiquette qui s'appelle _start
 			ldr		sp, =0x2001FFFC		/* init stack pointer sur haut de mémoire multiple 4 bits */
 

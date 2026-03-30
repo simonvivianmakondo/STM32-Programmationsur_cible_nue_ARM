@@ -31,8 +31,7 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all:
-	+@$(MAKE) --no-print-directory main-build && $(MAKE) --no-print-directory post-build
+all: main-build
 
 # Main-build Target
 main-build: MI11-TP2
@@ -50,10 +49,6 @@ clean:
 	-$(RM) MI11-TP2
 	-@echo ' '
 
-post-build:
-	-copy "C:\Users\Simon Makondo\Documents\MI11\MI11-STM32\Debug\MI11-TP2" "C:\renode\MI11-TP2.elf"
-	-@echo ' '
-
-.PHONY: all clean dependents main-build post-build
+.PHONY: all clean dependents main-build
 
 -include ../makefile.targets

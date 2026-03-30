@@ -4,20 +4,23 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../test1.c \
-../test2.c 
+../gpio.c \
+../main.c \
+../timer.c 
 
 S_UPPER_SRCS += \
 ../boot.S 
 
 C_DEPS += \
-./test1.d \
-./test2.d 
+./gpio.d \
+./main.d \
+./timer.d 
 
 OBJS += \
 ./boot.o \
-./test1.o \
-./test2.o 
+./gpio.o \
+./main.o \
+./timer.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -39,7 +42,7 @@ OBJS += \
 clean: clean--2e-
 
 clean--2e-:
-	-$(RM) ./boot.o ./test1.d ./test1.o ./test2.d ./test2.o
+	-$(RM) ./boot.o ./gpio.d ./gpio.o ./main.d ./main.o ./timer.d ./timer.o
 
 .PHONY: clean--2e-
 
