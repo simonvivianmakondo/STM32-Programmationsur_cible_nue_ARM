@@ -1,11 +1,11 @@
 # MI11 — Développement sur cible nue (Bare-Metal STM32H7)
 
 > Travaux pratiques de développement bare-metal sur microcontrôleur **STM32H743** (Cortex-M7),
-> réalisés dans le cadre de l'UE MI11 à l'**UTC Compiègne**.  
+> réalisés dans le cadre de l'UV MI11 à l'**UTC Compiègne**.  
 > Aucune couche d'abstraction matérielle (HAL/BSP) n'est utilisée : chaque registre est adressé directement.
 
 **Auteurs :** Simon · Éric Bjärstål  
-**Formation :** Ingénierie des Systèmes Embarqués et Autonomes (INES) — UTC Compiègne  
+**Formation :** Cycle Ingénieur — UTC Compiègne  
 **Année :** 2025–2026
 
 ---
